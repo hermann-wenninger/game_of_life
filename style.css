@@ -46,6 +46,8 @@ table {
 body {
     padding:1px;
     background-color: rgb(213 25 81);
+    height: 100vh;
+    overflow: hidden;
 }
 #container {
     padding-bottom: 1px;

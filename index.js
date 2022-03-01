@@ -7,7 +7,7 @@ var grid = new Array(rows);
 var nextGrid = new Array(rows);
 
 let timer;
-let reproTime = 50;
+let reproTime = 1;
 
 function initializeGrids(){
     for(let i = 0; i < rows; i++){
@@ -81,12 +81,19 @@ function clearButtonHandler(){
   playing = false;
   let startButton = document.getElementById('start');
   startButton.innerHTML = 'start';
+  clearTimeout(timer);
+  let cellList = document.getElementsByClassName('live');
+  for(let i = 0; i < cellList.length; i++){
+      cellList[i].setAttribute('class', 'dead');
+  }
+  resetGrids();
 }
 function startButtonHandler(){
     if(playing){
         console.log('pause');
         playing = false;
         this.innerHTML = 'continue';
+        clearTimeout(timer);
     } else {
         console.log('continue');
         playing = true;
