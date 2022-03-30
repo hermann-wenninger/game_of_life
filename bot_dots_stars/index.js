@@ -1,3 +1,5 @@
+console.log('start');
+
 const grid = document.querySelector("#grid");
 const up = document.querySelector("#up");
 const down = document.querySelector("#down");
