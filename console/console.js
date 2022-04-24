@@ -22,7 +22,7 @@ function draw() {
   ctx.font = fontSize + "px arial";
 
   for (let i = 0; i < drops.length; i++) {
-    const text = String.fromCharCode(Math.random() * 128);
+    const text = String.fromCharCode(Math.random() * 528 + 128);
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
     if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
